@@ -19,7 +19,6 @@ public class AttackState : State
     public override void DoChecks()
     {
         base.DoChecks();
-        seeTarget = entity.CheckSeeTarget();
     }
 
     public override void Enter()

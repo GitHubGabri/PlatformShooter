@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class D_AttackState : ScriptableObject
 {
-    [Tooltip("Damage the enemy will do in attack")]
+    [Tooltip("Damage the attack will do")]
     public int damage = 5;
 
-    [Tooltip("Rate of attack from the entity")]
+    [Tooltip("Rate of attack")]
     public float attackRate = 1000f;
 
     [Tooltip("What can damage the attack? Sorted in LayerMasks")]

@@ -46,9 +46,7 @@ public class DeathState : State
         if (deathData.explosionRef != null)
         {
             explosion = (GameObject)Object.Instantiate(deathData.explosionRef);
-            explosion.transform.position = new Vector3(entity.aliveGO.transform.position.x, entity.aliveGO.transform.position.y, entity.aliveGO.transform.position.z);
-            Vector2 workplace = entity.target.position - explosion.transform.position;
-            explosion.transform.rotation = Quaternion.Euler(0, 0, (Mathf.Atan2(workplace.y, workplace.x) * Mathf.Rad2Deg) * -1);
+            explosion.transform.position = new Vector3(entity.character.transform.position.x, entity.character.transform.position.y, entity.character.transform.position.z);
         }
     }
 
