@@ -22,9 +22,9 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Jump",
+                    "name": "Habilidad secundaria",
                     "type": "Button",
-                    "id": "338a1920-0a60-4a15-b5cb-64f229373c10",
+                    "id": "3d46e90d-21b3-4b4c-bf82-405c1367734d",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -34,18 +34,7 @@
                 {
                     "name": "",
                     "id": "5d0d1924-8e2e-44ba-931f-849239b93c08",
-                    "path": "<Keyboard>/r",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Shoot",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "f1fbcd73-3275-4ab3-8135-bc46b3e7c07a",
-                    "path": "<Gamepad>/rightTrigger",
+                    "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -121,23 +110,34 @@
                 },
                 {
                     "name": "",
-                    "id": "9b4435a9-82ed-4e2f-ab0f-d01ed93e5e62",
-                    "path": "<Keyboard>/e",
+                    "id": "f1fbcd73-3275-4ab3-8135-bc46b3e7c07a",
+                    "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Jump",
+                    "action": "Shoot",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "811a2125-86a2-4fdb-908b-2a7ad63482a3",
-                    "path": "<Gamepad>/buttonWest",
+                    "id": "6d8d8c5a-cb8d-43dd-9fe5-3b0319be48cb",
+                    "path": "<Gamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Jump",
+                    "action": "Habilidad secundaria",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c94c8d2c-d94e-49e5-b1db-68ff50590a7c",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Habilidad secundaria",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -164,7 +164,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Jump",
+                    "name": "HabilidadSecundaria",
                     "type": "Button",
                     "id": "f9924d9b-cb8c-4272-8397-8e74ca359262",
                     "expectedControlType": "Button",
@@ -176,7 +176,7 @@
                 {
                     "name": "",
                     "id": "8527e929-0a5c-4e0d-b6c2-1498b62dda59",
-                    "path": "<Keyboard>/o",
+                    "path": "<Keyboard>/rightShift",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -264,11 +264,11 @@
                 {
                     "name": "",
                     "id": "5b2cac1f-0d29-44b9-9cd5-ddf2ff0211de",
-                    "path": "<Keyboard>/p",
+                    "path": "<Keyboard>/rightShift",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Jump",
+                    "action": "HabilidadSecundaria",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -279,7 +279,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Jump",
+                    "action": "HabilidadSecundaria",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

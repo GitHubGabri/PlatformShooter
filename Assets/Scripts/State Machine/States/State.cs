@@ -25,7 +25,7 @@ public class State
     public virtual void Enter()
     {
         startTime = Time.time;
-        entity.anim.Play(animName);
+        //entity.anim.Play(animName);
     }
 
     public virtual void Exit()

@@ -17,20 +17,29 @@ public class Entity : MonoBehaviour
     public Vector2 originalPosition { get; private set; }
     public Material originalMaterial { get; private set; }
 
+    public Vector2 movement { get; private set; }
+
+    //Todos los estados
+    public MovementState movementState { get; private set; }
+    public D_MovementState dataMovementState { get; private set; }
+    public IdleState idleState { get; private set; }
+        public D_IdleState dataIdleState { get; private set; }
+    public AttackState attackState { get; private set; }
+        public D_AttackState dataAttackState { get; private set; }
+    public DeathState deathState { get; private set; }
+        public D_DeathState dataDeathState { get; private set; }
     //Where the actual health of the enemy will be stored
     public int health { get; private set; }
 
     //The last damage the entity recibed
     public int damageRecibed { get; private set; }
-    
-    //The speed the last attack have
-    public int speedFromAttack { get; private set; }
+
     #endregion
 
     #region Unity Functions
     public virtual void Start()
     {
-        character = transform.Find("Character").gameObject;
+        character = this.gameObject;
         rb = character.GetComponent<Rigidbody2D>();
         anim = character.GetComponent<Animator>();
         atsm = character.GetComponent<AnimationToStatemachine>();
@@ -39,7 +48,14 @@ public class Entity : MonoBehaviour
         originalMaterial = sp.material;
         health = entityData.maxHealth;
 
+        idleState = new IdleState(this, stateMachine, "", dataIdleState);
+        movementState = new MovementState(this, stateMachine, " " , dataMovementState);
+        deathState = new DeathState(this, stateMachine, "", dataDeathState);
+
+
         stateMachine = new FiniteStateMachine();
+        stateMachine.Initialize(idleState);
+        Debug.Log(stateMachine.currentState);
     }
 
     public virtual void Update()
@@ -56,8 +72,15 @@ public class Entity : MonoBehaviour
 
     public void InMovement(InputAction.CallbackContext context)
     {
-
+    movement = context.ReadValue<Vector2>();
+    if (!(movement.x == 0) || !(movement.y == 0)){
+        stateMachine.ChangeState(movementState);
     }
+    }
+
+
+
+
 
     public void InShoot(InputAction.CallbackContext context)
     {
