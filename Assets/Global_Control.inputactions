@@ -1,30 +1,30 @@
 {
-    "name": "GlobalControlls",
+    "name": "Global_Control",
     "maps": [
         {
             "name": "Player1",
-            "id": "e051b729-332e-485d-8e97-129d6dda9f34",
+            "id": "55cf09f7-b41b-4ef8-95bd-87d14e9cd5af",
             "actions": [
                 {
-                    "name": "Shoot",
+                    "name": "Movement",
                     "type": "Button",
-                    "id": "b3471c0e-f7d0-418c-9ba7-3e3b2327bb04",
+                    "id": "ba1cc29c-09d2-4154-b58b-b8900692edff",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 },
                 {
-                    "name": "Movement",
-                    "type": "Value",
-                    "id": "a74691a8-e096-4976-9731-c35e0a163d42",
-                    "expectedControlType": "Vector2",
+                    "name": "Shoot",
+                    "type": "Button",
+                    "id": "716f5943-f276-4a11-a382-ac16d5e7eb61",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 },
                 {
-                    "name": "Habilidad secundaria",
+                    "name": "HabilidadSecundaria",
                     "type": "Button",
-                    "id": "3d46e90d-21b3-4b4c-bf82-405c1367734d",
+                    "id": "f54a6ff5-849e-48dc-afb7-cb1da6d15473",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -33,8 +33,8 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "5d0d1924-8e2e-44ba-931f-849239b93c08",
-                    "path": "<Keyboard>/q",
+                    "id": "5e2529fb-ea7f-4ddf-a8df-43965b395423",
+                    "path": "<Keyboard>/leftShift",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -44,18 +44,18 @@
                 },
                 {
                     "name": "",
-                    "id": "d9818c4e-c41e-4b31-802f-6d03c99c184f",
-                    "path": "<Gamepad>/leftStick",
+                    "id": "699b443f-7cf0-41e5-9d96-f6eac4be6811",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement",
+                    "action": "HabilidadSecundaria",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "WASD",
-                    "id": "35612f9f-11c6-402f-9fdf-1da597b91e58",
+                    "id": "929e4507-a83d-4974-a770-0bb364cd4366",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
@@ -66,7 +66,7 @@
                 },
                 {
                     "name": "up",
-                    "id": "935d96d4-333f-4f2e-8bce-1b887db087e2",
+                    "id": "86d63861-427a-4906-8428-eb8ea32a274c",
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
@@ -77,7 +77,7 @@
                 },
                 {
                     "name": "down",
-                    "id": "63728a6b-9922-402e-82bc-4223c12eec40",
+                    "id": "9d6fe773-b080-41e8-a375-5937765f5b30",
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
@@ -88,7 +88,7 @@
                 },
                 {
                     "name": "left",
-                    "id": "49cd0cc9-cbdc-41f1-9073-e6c47145fa8f",
+                    "id": "20b9029f-d25e-4c2e-a1a4-e3b3c73535fe",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
@@ -99,7 +99,7 @@
                 },
                 {
                     "name": "right",
-                    "id": "f0560ef0-7f73-4d7f-94db-e121b555f0af",
+                    "id": "480fd3ed-cfc2-48a7-b748-9f89387499a8",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
@@ -107,66 +107,33 @@
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "f1fbcd73-3275-4ab3-8135-bc46b3e7c07a",
-                    "path": "<Gamepad>/rightTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Shoot",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "6d8d8c5a-cb8d-43dd-9fe5-3b0319be48cb",
-                    "path": "<Gamepad>/leftTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Habilidad secundaria",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c94c8d2c-d94e-49e5-b1db-68ff50590a7c",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Habilidad secundaria",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         },
         {
             "name": "Player2",
-            "id": "ef608408-ef6c-4e41-87a3-cb45c6d10a53",
+            "id": "eb2b36ec-8d41-484e-9f7c-f806ebb02fe3",
             "actions": [
                 {
-                    "name": "Shoot",
+                    "name": "Movement",
                     "type": "Button",
-                    "id": "54adf084-27cb-4175-8208-f9d96a17cc33",
+                    "id": "e788359b-06ee-498b-ad9a-3a9fda3930fa",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 },
                 {
-                    "name": "Movement",
-                    "type": "Value",
-                    "id": "767a0224-1fd8-4eb2-851a-a74fc651897b",
-                    "expectedControlType": "Vector2",
+                    "name": "Shoot",
+                    "type": "Button",
+                    "id": "fe30f1b1-aa41-4adc-89cf-48fd81f89fc2",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 },
                 {
                     "name": "HabilidadSecundaria",
                     "type": "Button",
-                    "id": "f9924d9b-cb8c-4272-8397-8e74ca359262",
+                    "id": "7a957886-84b0-4982-9dfb-4750dfcf7d59",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -175,7 +142,7 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "8527e929-0a5c-4e0d-b6c2-1498b62dda59",
+                    "id": "cea45315-5889-4ec1-b4db-42c611e84358",
                     "path": "<Keyboard>/rightShift",
                     "interactions": "",
                     "processors": "",
@@ -186,29 +153,18 @@
                 },
                 {
                     "name": "",
-                    "id": "6546ef8a-8d8e-4ea6-b693-142488955e43",
-                    "path": "<Gamepad>/rightTrigger",
+                    "id": "2caed4f3-cb1b-402d-8351-5962f3d5c8cf",
+                    "path": "<Keyboard>/rightCtrl",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Shoot",
+                    "action": "HabilidadSecundaria",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "b963d71e-f177-4469-a24d-13c83656342c",
-                    "path": "<Gamepad>/leftStick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "WASD",
-                    "id": "b7980f8e-9407-4889-89a2-07ee5dd971bb",
+                    "name": "Flechas",
+                    "id": "feb5b5f8-1bea-4349-813e-e43f84bfacb4",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
@@ -219,7 +175,7 @@
                 },
                 {
                     "name": "up",
-                    "id": "16bd03a6-a6e7-4586-b2e7-16a7ac7d98ca",
+                    "id": "cc2cb280-2e56-46a0-9cef-939ecc8fddd2",
                     "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
@@ -230,7 +186,7 @@
                 },
                 {
                     "name": "down",
-                    "id": "e84236e8-f538-4aa1-a2f4-5f3caac5990d",
+                    "id": "7c0c0741-6aec-4b96-9c00-95eba5c15643",
                     "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
@@ -241,7 +197,7 @@
                 },
                 {
                     "name": "left",
-                    "id": "13127df0-d419-43b3-8fea-9fc28d3280a0",
+                    "id": "963a9b86-e8f6-486a-92ed-28711cc14216",
                     "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
@@ -252,7 +208,7 @@
                 },
                 {
                     "name": "right",
-                    "id": "12f05186-6948-4489-9102-9c691991ad9b",
+                    "id": "4f8dfac6-5ed6-44e2-b1ae-14d9154adf96",
                     "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
@@ -260,66 +216,6 @@
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "5b2cac1f-0d29-44b9-9cd5-ddf2ff0211de",
-                    "path": "<Keyboard>/rightShift",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "HabilidadSecundaria",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "7d8dc7c6-b99b-4fad-8a30-d8ff55cf42c2",
-                    "path": "<Gamepad>/buttonWest",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "HabilidadSecundaria",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "UI",
-            "id": "cc0192b8-24da-484f-a6ff-65d5d7df8344",
-            "actions": [
-                {
-                    "name": "Pause",
-                    "type": "Button",
-                    "id": "0e291b62-54c7-4215-8db2-a69ad371eb5d",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "ecb09fd2-2303-4f24-842a-8e60e7fe7f3e",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Pause",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "80402147-b3f9-4918-8a9b-0eb3606da69e",
-                    "path": "<Gamepad>/start",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Pause",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         }

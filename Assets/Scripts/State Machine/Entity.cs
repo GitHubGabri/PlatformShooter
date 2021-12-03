@@ -41,17 +41,16 @@ public class Entity : MonoBehaviour
     {
         character = this.gameObject;
         rb = character.GetComponent<Rigidbody2D>();
-        anim = character.GetComponent<Animator>();
-        atsm = character.GetComponent<AnimationToStatemachine>();
+        //anim = character.GetComponent<Animator>();
+        //atsm = character.GetComponent<AnimationToStatemachine>();
         sp = character.GetComponent<SpriteRenderer>();
         originalPosition = character.transform.position;
-        originalMaterial = sp.material;
-        health = entityData.maxHealth;
+        //originalMaterial = sp.material;
+        //health = entityData.maxHealth;
 
         idleState = new IdleState(this, stateMachine, "", dataIdleState);
         movementState = new MovementState(this, stateMachine, " " , dataMovementState);
         deathState = new DeathState(this, stateMachine, "", dataDeathState);
-
 
         stateMachine = new FiniteStateMachine();
         stateMachine.Initialize(idleState);
@@ -73,14 +72,11 @@ public class Entity : MonoBehaviour
     public void InMovement(InputAction.CallbackContext context)
     {
     movement = context.ReadValue<Vector2>();
+    Debug.Log("in movement");
     if (!(movement.x == 0) || !(movement.y == 0)){
         stateMachine.ChangeState(movementState);
     }
     }
-
-
-
-
 
     public void InShoot(InputAction.CallbackContext context)
     {

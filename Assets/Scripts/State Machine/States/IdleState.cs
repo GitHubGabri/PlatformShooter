@@ -15,8 +15,8 @@ public class IdleState : State
     public override void Enter()
     {
         base.Enter();
-        entity.atsm.idleState = this;
-        animationFinished = false;
+        //entity.atsm.idleState = this;
+        //animationFinished = false;
         
     }
 
@@ -28,6 +28,7 @@ public class IdleState : State
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
+        Debug.Log("Idel");
     }
     public override void DoChecks()
     {

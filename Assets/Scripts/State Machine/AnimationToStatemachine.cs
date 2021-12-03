@@ -20,7 +20,6 @@ public class AnimationToStatemachine : MonoBehaviour
     private void FinishIdle()
     {
         idleState.FinishIdle();
-
     }
     private void FinishDeath()
     {
