@@ -23,11 +23,14 @@ public class Entity : MonoBehaviour
     public MovementState movementState { get; private set; }
     public D_MovementState dataMovementState { get; private set; }
     public IdleState idleState { get; private set; }
-        public D_IdleState dataIdleState { get; private set; }
+    public D_IdleState dataIdleState { get; private set; }
     public AttackState attackState { get; private set; }
-        public D_AttackState dataAttackState { get; private set; }
+    public D_AttackState dataAttackState { get; private set; }
     public DeathState deathState { get; private set; }
-        public D_DeathState dataDeathState { get; private set; }
+    public D_DeathState dataDeathState { get; private set; }
+    public HabilidadState habilidadState { get; private set; }
+    public D_HabilidadState dataHabilidadState { get; private set; }
+
     //Where the actual health of the enemy will be stored
     public int health { get; private set; }
 
@@ -51,6 +54,8 @@ public class Entity : MonoBehaviour
         idleState = new IdleState(this, stateMachine, "", dataIdleState);
         movementState = new MovementState(this, stateMachine, " " , dataMovementState);
         deathState = new DeathState(this, stateMachine, "", dataDeathState);
+        habilidadState = new HabilidadState(this, stateMachine, "", dataHabilidadState);
+        attackState = new AttackState(this, stateMachine, "", dataAttackState);
 
         stateMachine = new FiniteStateMachine();
         stateMachine.Initialize(idleState);
@@ -72,7 +77,6 @@ public class Entity : MonoBehaviour
     public void InMovement(InputAction.CallbackContext context)
     {
     movement = context.ReadValue<Vector2>();
-    Debug.Log("in movement");
     if (!(movement.x == 0) || !(movement.y == 0)){
         stateMachine.ChangeState(movementState);
     }
@@ -80,9 +84,17 @@ public class Entity : MonoBehaviour
 
     public void InShoot(InputAction.CallbackContext context)
     {
-
+    if (context.started){
+        stateMachine.ChangeState(attackState);
+    }
     }
 
+    public void InHability(InputAction.CallbackContext context)
+    {
+    if (context.started){
+        stateMachine.ChangeState(habilidadState);
+    }
+    }
     #endregion
 
     #region Set Functions

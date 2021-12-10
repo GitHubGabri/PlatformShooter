@@ -288,6 +288,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 7a957886-84b0-4982-9dfb-4750dfcf7d59
     m_ActionName: Player2/HabilidadSecundaria[/Keyboard/rightCtrl]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 245527fb-0736-4761-bf10-08862d6bb17b
+    m_ActionName: Player1/Roll[/Keyboard/q]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player2
@@ -423,11 +427,35 @@ MonoBehaviour:
     m_ActionId: ba1cc29c-09d2-4154-b58b-b8900692edff
     m_ActionName: Player1/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1626773277}
+        m_TargetAssemblyTypeName: Entity, Assembly-CSharp
+        m_MethodName: InShoot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 716f5943-f276-4a11-a382-ac16d5e7eb61
     m_ActionName: Player1/Shoot[/Keyboard/leftShift]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1626773277}
+        m_TargetAssemblyTypeName: Entity, Assembly-CSharp
+        m_MethodName: InHability
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: f54a6ff5-849e-48dc-afb7-cb1da6d15473
     m_ActionName: Player1/HabilidadSecundaria[/Keyboard/e]
   - m_PersistentCalls:
@@ -442,6 +470,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 7a957886-84b0-4982-9dfb-4750dfcf7d59
     m_ActionName: Player2/HabilidadSecundaria[/Keyboard/rightCtrl]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 245527fb-0736-4761-bf10-08862d6bb17b
+    m_ActionName: Player1/Roll[/Keyboard/q]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player1

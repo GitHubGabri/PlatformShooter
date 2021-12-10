@@ -2,18 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackState : State
+public class HabilidadState : State
 {
-    protected D_AttackState attackData;
-    protected Transform attackPosition;
-    
-    //protected int[] attackInfo;
+    protected D_HabilidadState habilidadData;
     protected bool animationFinished;
-    //protected bool seeTarget;
-    public AttackState(Entity entity, FiniteStateMachine stateMachine, string animName, D_AttackState attackData) : base(entity, stateMachine, animName)
+
+    public HabilidadState(Entity entity, FiniteStateMachine stateMachine, string animName, D_HabilidadState habilidadData) : base(entity, stateMachine, animName)
     {
-        this.attackData = attackData;
-        //this.attackPosition = attackPosition;
+        this.habilidadData = habilidadData;
     }
 
     public override void DoChecks()
@@ -24,9 +20,7 @@ public class AttackState : State
     public override void Enter()
     {
         base.Enter();
-        //entity.atsm.attackState = this;
-        //attackInfo = new int[1] {attackData.damage};
-        //animationFinished = false;
+        Debug.Log("wow habilidad");
     }
 
     public override void Exit()
