@@ -31,7 +31,6 @@ public class MovementState : State
     {
         base.PhysicsUpdate();
         Mover();
-        stateMachine.ChangeState(entity.IdleState);
     }
     public override void DoChecks()
     {

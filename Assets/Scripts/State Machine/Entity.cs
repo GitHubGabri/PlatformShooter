@@ -82,6 +82,9 @@ public class Entity : MonoBehaviour
     if (!(movement.x == 0) || !(movement.y == 0)){
         stateMachine.ChangeState(movementState);
     }
+    else{
+       stateMachine.ChangeState(idleState);
+    }
     }
 
     public void InShoot(InputAction.CallbackContext context)
@@ -95,6 +98,13 @@ public class Entity : MonoBehaviour
     {
     if (context.started){
         stateMachine.ChangeState(habilidadState);
+    }
+    }
+
+    public void InDash(InputAction.CallbackContext context)
+    {
+    if (context.started){
+        stateMachine.ChangeState(dashState);
     }
     }
     #endregion
