@@ -36,7 +36,6 @@ public class DashState : State
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
-        Enter();
         Exit();
     }
 
