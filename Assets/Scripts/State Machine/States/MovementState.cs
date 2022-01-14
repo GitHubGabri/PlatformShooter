@@ -30,9 +30,8 @@ public class MovementState : State
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
-        Enter();
         Mover();
-        Exit();
+        stateMachine.ChangeState(entity.IdleState);
     }
     public override void DoChecks()
     {

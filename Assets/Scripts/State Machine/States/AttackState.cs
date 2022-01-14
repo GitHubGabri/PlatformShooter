@@ -24,7 +24,7 @@ public class AttackState : State
     public override void Enter()
     {
         base.Enter();
-        //entity.atsm.attackState = this;
+        entity.atsm.attackState = this;
         //attackInfo = new int[1] {attackData.damage};
         //animationFinished = false;
     }

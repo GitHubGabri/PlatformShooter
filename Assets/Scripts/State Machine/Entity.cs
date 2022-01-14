@@ -30,7 +30,8 @@ public class Entity : MonoBehaviour
     public D_DeathState dataDeathState { get; private set; }
     public HabilidadState habilidadState { get; private set; }
     public D_HabilidadState dataHabilidadState { get; private set; }
-
+    public DashState dashState { get; private set; }
+    public D_DashState dataDashState { get; private set; }
     //Where the actual health of the enemy will be stored
     public int health { get; private set; }
 
@@ -56,6 +57,7 @@ public class Entity : MonoBehaviour
         deathState = new DeathState(this, stateMachine, "", dataDeathState);
         habilidadState = new HabilidadState(this, stateMachine, "", dataHabilidadState);
         attackState = new AttackState(this, stateMachine, "", dataAttackState);
+        dashState = new DashState(this, stateMachine, "", dataDashState);
 
         stateMachine = new FiniteStateMachine();
         stateMachine.Initialize(idleState);

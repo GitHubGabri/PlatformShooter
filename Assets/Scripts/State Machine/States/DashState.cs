@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HabilidadState : State
+public class DashState : State
 {
-    protected D_HabilidadState habilidadData;
+    protected D_DashState dashData;
     protected bool animationFinished;
 
-    public HabilidadState(Entity entity, FiniteStateMachine stateMachine, string animName, D_HabilidadState habilidadData) : base(entity, stateMachine, animName)
+    public DashState(Entity entity, FiniteStateMachine stateMachine, string animName, D_DashState dashData) : base(entity, stateMachine, animName)
     {
-        this.habilidadData = habilidadData;
+        this.dashData = dashData;
     }
 
     public override void DoChecks()
@@ -20,7 +20,7 @@ public class HabilidadState : State
     public override void Enter()
     {
         base.Enter();
-        Debug.Log("wow habilidad");
+        Debug.Log("wow dash");
     }
 
     public override void Exit()
@@ -36,6 +36,7 @@ public class HabilidadState : State
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
+        Enter();
         Exit();
     }
 
