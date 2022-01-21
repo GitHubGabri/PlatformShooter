@@ -21,17 +21,17 @@ public class Entity : MonoBehaviour
 
     //Todos los estados
     public MovementState movementState { get; private set; }
-    public D_MovementState dataMovementState { get; private set; }
+    public D_MovementState dataMovementState;
     public IdleState idleState { get; private set; }
-    public D_IdleState dataIdleState { get; private set; }
+    public D_IdleState dataIdleState;
     public AttackState attackState { get; private set; }
-    public D_AttackState dataAttackState { get; private set; }
+    public D_AttackState dataAttackState;
     public DeathState deathState { get; private set; }
-    public D_DeathState dataDeathState { get; private set; }
+    public D_DeathState dataDeathState;
     public HabilidadState habilidadState { get; private set; }
-    public D_HabilidadState dataHabilidadState { get; private set; }
+    public D_HabilidadState dataHabilidadState;
     public DashState dashState { get; private set; }
-    public D_DashState dataDashState { get; private set; }
+    public D_DashState dataDashState;
     //Where the actual health of the enemy will be stored
     public int health { get; private set; }
 

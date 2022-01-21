@@ -227,6 +227,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityData: {fileID: 11400000, guid: f53e208dd8b176549afda322588952c2, type: 2}
+  dataMovementState: {fileID: 0}
+  dataIdleState: {fileID: 0}
+  dataAttackState: {fileID: 0}
+  dataDeathState: {fileID: 0}
+  dataHabilidadState: {fileID: 0}
+  dataDashState: {fileID: 0}
 --- !u!114 &1410567407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -629,6 +635,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityData: {fileID: 11400000, guid: f53e208dd8b176549afda322588952c2, type: 2}
+  dataMovementState: {fileID: 0}
+  dataIdleState: {fileID: 11400000, guid: 6726f9ab690e3a3498f0bd8b8a93b866, type: 2}
+  dataAttackState: {fileID: 11400000, guid: f0c8288fe6ee67a459169f59b23c94c6, type: 2}
+  dataDeathState: {fileID: 11400000, guid: 518674e08bb571046b05f7f7d202b804, type: 2}
+  dataHabilidadState: {fileID: 11400000, guid: 2fa1a6b8047c8a3469b8e2745c944272, type: 2}
+  dataDashState: {fileID: 11400000, guid: 0795a1e1eb06fdd4d8c0570aecd303b2, type: 2}
 --- !u!95 &1626773278
 Animator:
   serializedVersion: 3
@@ -667,7 +679,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &1626773280
 MonoBehaviour:

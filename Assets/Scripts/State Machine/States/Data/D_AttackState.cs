@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "newAttackStateData", menuName = "Data/State Data/Attack/Attack State")]
 public class D_AttackState : ScriptableObject
 {
     [Tooltip("Damage the attack will do")]

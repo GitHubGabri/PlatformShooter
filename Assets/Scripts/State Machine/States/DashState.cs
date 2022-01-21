@@ -7,6 +7,7 @@ public class DashState : State
     protected D_DashState dashData;
     protected bool animationFinished;
 
+    private Vector2 direction;
 
     public DashState(Entity entity, FiniteStateMachine stateMachine, string animName, D_DashState dashData) : base(entity, stateMachine, animName)
     {
@@ -21,14 +22,12 @@ public class DashState : State
     public override void Enter()
     {
         base.Enter();
-        Debug.Log("wow dash");
-        entity.rb.AddForce(entity.movement * 8, ForceMode2D.Impulse);
+        direction = entity.movement;
     }
 
     public override void Exit()
     {
         base.Exit();
-        entity.rb.RemoveForce(entity.movement * 8, ForceMode2D.Impulse);
     }
 
     public override void LogicUpdate()
@@ -38,7 +37,9 @@ public class DashState : State
 
     public override void PhysicsUpdate()
     {
+
         base.PhysicsUpdate();
+        Dash();
         Exit();
     }
 
@@ -49,5 +50,19 @@ public class DashState : State
     public virtual void FinishAttack()
     {
         animationFinished = true;
+    }
+
+    public virtual void Dash()
+    {
+        if (direction != new Vector2(0, 0)){
+        if (dashData.DashTime == 0f){
+        direction = new Vector2(0, 0);
+        }
+        else
+        {
+            dashData.DashTime -= Time.deltaTime;
+            entity.rb.velocity = direction * 20;
+        }
+        }
     }
 }
