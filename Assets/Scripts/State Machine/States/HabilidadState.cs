@@ -20,7 +20,7 @@ public class HabilidadState : State
     public override void Enter()
     {
         base.Enter();
-        Debug.Log("wow habilidad");
+        //Debug.Log("wow habilidad");
     }
 
     public override void Exit()

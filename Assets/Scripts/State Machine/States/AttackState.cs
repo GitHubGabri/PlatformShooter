@@ -25,7 +25,7 @@ public class AttackState : State
     {
         base.Enter();
 
-        Debug.Log("Enter atack");
+        //Debug.Log("Enter atack");
         //entity.atsm.attackState = this;
         //attackInfo = new int[1] {attackData.damage};
         //animationFinished = false;

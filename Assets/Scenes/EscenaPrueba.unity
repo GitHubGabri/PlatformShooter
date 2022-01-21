@@ -635,7 +635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityData: {fileID: 11400000, guid: f53e208dd8b176549afda322588952c2, type: 2}
-  dataMovementState: {fileID: 0}
+  dataMovementState: {fileID: 11400000, guid: 0eec4e93311615b40b23c738988e72c2, type: 2}
   dataIdleState: {fileID: 11400000, guid: 6726f9ab690e3a3498f0bd8b8a93b866, type: 2}
   dataAttackState: {fileID: 11400000, guid: f0c8288fe6ee67a459169f59b23c94c6, type: 2}
   dataDeathState: {fileID: 11400000, guid: 518674e08bb571046b05f7f7d202b804, type: 2}

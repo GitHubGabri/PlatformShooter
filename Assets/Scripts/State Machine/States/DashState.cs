@@ -54,15 +54,15 @@ public class DashState : State
 
     public virtual void Dash()
     {
-        if (direction != new Vector2(0, 0)){
-        if (dashData.DashTime == 0f){
-        direction = new Vector2(0, 0);
+        if (Time.time-startTime >= dashData.DashTime){
+            Debug.Log("Para");
+            entity.rb.velocity = new Vector2(0, 0);
+            entity.stateMachine.ChangeState(entity.movementState);
         }
         else
         {
-            dashData.DashTime -= Time.deltaTime;
+            Debug.Log("sppeeeed");
             entity.rb.velocity = direction * 20;
-        }
         }
     }
 }

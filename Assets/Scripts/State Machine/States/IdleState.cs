@@ -15,7 +15,7 @@ public class IdleState : State
     public override void Enter()
     {
         base.Enter();
-        Debug.Log("Ha entrado");
+        //Debug.Log("Ha entrado");
         //entity.atsm.idleState = this;
         //animationFinished = false;
         

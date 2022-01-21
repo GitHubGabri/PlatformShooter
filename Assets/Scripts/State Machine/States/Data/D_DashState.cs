@@ -7,6 +7,6 @@ using UnityEngine;
 
 public class D_DashState : ScriptableObject
 {
-    public float DashTime = 1f;
+    public float DashTime = 3f;
   
 }

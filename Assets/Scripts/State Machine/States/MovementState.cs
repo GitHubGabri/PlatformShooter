@@ -15,7 +15,7 @@ public class MovementState : State
     public override void Enter()
     {
         base.Enter();
-        Debug.Log("Has entrado en Movement State");
+        //Debug.Log("Has entrado en Movement State");
         //entity.atsm.movementState = this;
         //animationFinished = false;
         
@@ -23,7 +23,7 @@ public class MovementState : State
 
     public override void Exit()
     {
-        Debug.Log("Sal");
+        //Debug.Log("Sal");
         base.Exit();
     }
 
