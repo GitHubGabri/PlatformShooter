@@ -30,7 +30,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Roll",
+                    "name": "Dash",
                     "type": "Button",
                     "id": "245527fb-0736-4761-bf10-08862d6bb17b",
                     "expectedControlType": "Button",
@@ -123,7 +123,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Roll",
+                    "action": "Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -153,6 +153,14 @@
                     "name": "HabilidadSecundaria",
                     "type": "Button",
                     "id": "7a957886-84b0-4982-9dfb-4750dfcf7d59",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Dash",
+                    "type": "Button",
+                    "id": "b8da4270-78a4-4697-a95f-22663815e319",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -235,6 +243,17 @@
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "8b02bd04-9a0b-4744-853c-0a35b9e12512",
+                    "path": "<Keyboard>/numpad0",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
