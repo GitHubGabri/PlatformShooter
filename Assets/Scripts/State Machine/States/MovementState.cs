@@ -45,17 +45,24 @@ public class MovementState : State
     Vector3 direction = Vector3.zero;
     direction.x= movimiento.x;
     direction.y= movimiento.y;
-    if (direction.x>0){
-        entity.sp.flipX = true;
-    } 
-    else {
-        entity.sp.flipX = false;
-    }
     float timeSinceLastFrame = Time.deltaTime;
     Vector3 translation = direction * timeSinceLastFrame * entity.entityData.velocity;    
     entity.transform.Translate(translation);
+    if (direction.y < 0 && direction.x == 0){
+        CambiarSprite(entity.detras);
     }
-
+    if(direction.x>0){
+    CambiarSprite(entity.derechaizquierda);
+    entity.sp.flipX=true;   
+    }
+    if(direction.x<0){
+    CambiarSprite(entity.derechaizquierda);
+    entity.sp.flipX=false;   
+    }
+    }
+    private void CambiarSprite(Sprite newSprite){
+       entity.sp.sprite = newSprite; 
+    }
 }
 
 

@@ -18,6 +18,9 @@ public class Entity : MonoBehaviour
     public Material originalMaterial { get; private set; }
 
     public Vector2 movement { get; private set; }
+    
+    public Sprite detras;
+    public Sprite derechaizquierda;
 
     //Todos los estados
     public MovementState movementState { get; private set; }
@@ -37,6 +40,8 @@ public class Entity : MonoBehaviour
 
     //The last damage the entity recibed
     public int damageRecibed { get; private set; }
+    
+    private float lastDash = 0;
 
     #endregion
 
@@ -104,7 +109,10 @@ public class Entity : MonoBehaviour
     public void InDash(InputAction.CallbackContext context)
     {
     if (context.started){
-        stateMachine.ChangeState(dashState);
+        if(Time.time > lastDash + dataDashState.dashDelay){
+            stateMachine.ChangeState(dashState);
+            lastDash = Time.time;
+        }
     }
     }
     #endregion

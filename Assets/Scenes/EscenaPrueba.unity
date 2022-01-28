@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: 1410567404}
   - component: {fileID: 1410567403}
   - component: {fileID: 1410567402}
+  - component: {fileID: 1410567410}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Untagged
@@ -171,8 +172,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.106413394, y: -0.028669477}
-  m_Size: {x: 0.8575472, y: 2.0364883}
+  m_Offset: {x: -0.045019045, y: -0.07237154}
+  m_Size: {x: 0.17344913, y: 0.7414917}
   m_Direction: 0
 --- !u!95 &1410567404
 Animator:
@@ -227,6 +228,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityData: {fileID: 11400000, guid: f53e208dd8b176549afda322588952c2, type: 2}
+  detras: {fileID: 0}
+  derechaizquierda: {fileID: 0}
   dataMovementState: {fileID: 0}
   dataIdleState: {fileID: 0}
   dataAttackState: {fileID: 0}
@@ -388,7 +391,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 2, y: 2}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -408,6 +411,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &1410567410
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410567401}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.061450496, y: -0.29585922}
+  m_Size: {x: 0.3075931, y: 0.2337552}
+  m_Direction: 1
 --- !u!1 &1626773272
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,8 +441,8 @@ GameObject:
   - component: {fileID: 1626773277}
   - component: {fileID: 1626773279}
   - component: {fileID: 1626773278}
-  - component: {fileID: 1626773276}
   - component: {fileID: 1626773280}
+  - component: {fileID: 1626773276}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -581,12 +600,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7af1814d2d336f24ca4dcc6940120906, type: 3}
+  m_Sprite: {fileID: 5746819448847024053, guid: 77dd9ec5c41f3e040a918e18625b95a1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 2, y: 2}
+  m_Size: {x: 0.42, y: 0.9}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -619,9 +638,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.049357638, y: -0.012345493}
-  m_Size: {x: 0.42621794, y: 0.9784061}
-  m_Direction: 0
+  m_Offset: {x: -0.061450496, y: -0.29585922}
+  m_Size: {x: 0.3075931, y: 0.2337552}
+  m_Direction: 1
 --- !u!114 &1626773277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -635,6 +654,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityData: {fileID: 11400000, guid: f53e208dd8b176549afda322588952c2, type: 2}
+  detras: {fileID: -7341069038599278712, guid: 77dd9ec5c41f3e040a918e18625b95a1, type: 3}
+  derechaizquierda: {fileID: 5746819448847024053, guid: 77dd9ec5c41f3e040a918e18625b95a1, type: 3}
   dataMovementState: {fileID: 11400000, guid: 0eec4e93311615b40b23c738988e72c2, type: 2}
   dataIdleState: {fileID: 11400000, guid: 6726f9ab690e3a3498f0bd8b8a93b866, type: 2}
   dataAttackState: {fileID: 11400000, guid: f0c8288fe6ee67a459169f59b23c94c6, type: 2}
