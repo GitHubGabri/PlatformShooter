@@ -62,7 +62,7 @@ public class DashState : State
         else
         {
             Debug.Log("sppeeeed");
-            entity.rb.velocity = direction * 20;
+            entity.rb.velocity = direction * dashData.speedfactor;
         }
     }
 }

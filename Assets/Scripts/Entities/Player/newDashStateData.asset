@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: newDashStateData
   m_EditorClassIdentifier: 
   dashTime: 3
-  dashDelay: 2
+  dashDelay: 5
+  speedfactor: 2

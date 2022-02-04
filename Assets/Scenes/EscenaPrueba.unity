@@ -661,7 +661,7 @@ MonoBehaviour:
   dataAttackState: {fileID: 11400000, guid: f0c8288fe6ee67a459169f59b23c94c6, type: 2}
   dataDeathState: {fileID: 11400000, guid: 518674e08bb571046b05f7f7d202b804, type: 2}
   dataHabilidadState: {fileID: 11400000, guid: 2fa1a6b8047c8a3469b8e2745c944272, type: 2}
-  dataDashState: {fileID: 11400000, guid: 0795a1e1eb06fdd4d8c0570aecd303b2, type: 2}
+  dataDashState: {fileID: 0}
 --- !u!95 &1626773278
 Animator:
   serializedVersion: 3
@@ -767,7 +767,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
