@@ -49,14 +49,14 @@ public class MovementState : State
     Vector3 translation = direction * timeSinceLastFrame * entity.entityData.velocity;    
     entity.transform.Translate(translation);
     if (direction.y < 0 && direction.x == 0){
-        CambiarSprite(entity.detras);
+        //CambiarSprite(entity.detras);
     }
     if(direction.x>0){
-    CambiarSprite(entity.derechaizquierda);
+    //CambiarSprite(entity.derechaizquierda);
     entity.sp.flipX=true;   
     }
     if(direction.x<0){
-    CambiarSprite(entity.derechaizquierda);
+    //CambiarSprite(entity.derechaizquierda);
     entity.sp.flipX=false;   
     }
     }
