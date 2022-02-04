@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class Entity : MonoBehaviour
 {
@@ -18,9 +19,6 @@ public class Entity : MonoBehaviour
     public Material originalMaterial { get; private set; }
 
     public Vector2 movement { get; private set; }
-    
-    public Sprite detras;
-    public Sprite derechaizquierda;
 
     //Todos los estados
     public MovementState movementState { get; private set; }
@@ -36,12 +34,12 @@ public class Entity : MonoBehaviour
     public DashState dashState { get; private set; }
     public D_DashState dataDashState;
     //Where the actual health of the enemy will be stored
+
+    public Slider slider;
     public int health { get; private set; }
 
     //The last damage the entity recibed
     public int damageRecibed { get; private set; }
-    
-    private float lastDash = 0;
 
     #endregion
 
@@ -109,10 +107,9 @@ public class Entity : MonoBehaviour
     public void InDash(InputAction.CallbackContext context)
     {
     if (context.started){
-        if(Time.time > lastDash + dataDashState.dashDelay){
-            stateMachine.ChangeState(dashState);
-            lastDash = Time.time;
-        }
+        stateMachine.ChangeState(dashState);
+
+            Debug.Log("In dash");
     }
     }
     #endregion
@@ -121,6 +118,8 @@ public class Entity : MonoBehaviour
     public void SetHealth(int health)
     {
         this.health = health;
+
+        slider.value = health;
     }
 
     public void SetMaterial(Material material)
