@@ -33,6 +33,7 @@ public class Entity : MonoBehaviour
     public D_HabilidadState dataHabilidadState;
     public DashState dashState { get; private set; }
     public D_DashState dataDashState;
+    private float lastDash = 0;
     //Where the actual health of the enemy will be stored
 
     public Slider slider;
@@ -106,11 +107,10 @@ public class Entity : MonoBehaviour
 
     public void InDash(InputAction.CallbackContext context)
     {
-    if (context.started){
-        stateMachine.ChangeState(dashState);
-
-            Debug.Log("In dash");
-    }
+        if(Time.time > lastDash + dataDashState.dashDelay){
+            stateMachine.ChangeState(dashState);
+            lastDash = Time.time;
+        }
     }
     #endregion
 
