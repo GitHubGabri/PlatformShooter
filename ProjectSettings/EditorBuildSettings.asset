@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EscenaPrueba.unity
     guid: 7f1524d0e1fa39f42b76372a34e52588
+  - enabled: 1
+    path: Assets/Scenes/Locker.unity
+    guid: a0c0df8d257aebd44a7a49ce7689de70
   m_configObjects: {}
