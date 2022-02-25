@@ -1269,6 +1269,8 @@ MonoBehaviour:
   dataHabilidadState: {fileID: 0}
   dataDashState: {fileID: 0}
   slider: {fileID: 111820695}
+  detras: {fileID: 0}
+  derechaizquierda: {fileID: 0}
 --- !u!114 &1410567407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1816,6 +1818,8 @@ MonoBehaviour:
   dataHabilidadState: {fileID: 11400000, guid: 2fa1a6b8047c8a3469b8e2745c944272, type: 2}
   dataDashState: {fileID: 11400000, guid: 0795a1e1eb06fdd4d8c0570aecd303b2, type: 2}
   slider: {fileID: 979545942}
+  detras: {fileID: 0}
+  derechaizquierda: {fileID: 0}
 --- !u!95 &1626773278
 Animator:
   serializedVersion: 3

@@ -28,6 +28,7 @@ public class DashState : State
     public override void Exit()
     {
         base.Exit();
+        entity.rb.velocity = new Vector2(0, 0);
     }
 
     public override void LogicUpdate()
@@ -40,7 +41,7 @@ public class DashState : State
 
         base.PhysicsUpdate();
         Dash();
-        Exit();
+
     }
 
     public virtual void TriggerAttack()
@@ -54,15 +55,14 @@ public class DashState : State
 
     public virtual void Dash()
     {
-        if (Time.time-startTime >= dashData.DashTime){
+        if (Time.time-startTime >= dashData.dashTime){
             Debug.Log("Para");
-            entity.rb.velocity = new Vector2(0, 0);
             entity.stateMachine.ChangeState(entity.movementState);
         }
         else
         {
             Debug.Log("sppeeeed");
-            entity.rb.velocity = direction * 20;
+            entity.rb.velocity = direction * dashData.speedfactor;
         }
     }
 }
