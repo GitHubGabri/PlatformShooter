@@ -26,13 +26,13 @@ public class Entity : MonoBehaviour
     public IdleState idleState { get; private set; }
     public D_IdleState dataIdleState;
     public AttackState attackState { get; private set; }
+    public D_AttackState dataAttackState;
     public DeathState deathState { get; private set; }
     public D_DeathState dataDeathState;
     public HabilidadState habilidadState { get; private set; }
     public D_HabilidadState dataHabilidadState;
     public DashState dashState { get; private set; }
     public D_DashState dataDashState;
-    public Weapon actualWeapon;
     //Where the actual health of the enemy will be stored
 
     public Slider slider;
@@ -59,7 +59,7 @@ public class Entity : MonoBehaviour
         movementState = new MovementState(this, stateMachine, " " , dataMovementState);
         deathState = new DeathState(this, stateMachine, "", dataDeathState);
         habilidadState = new HabilidadState(this, stateMachine, "", dataHabilidadState);
-        attackState = new AttackState(this, stateMachine, "", actualWeapon);
+        attackState = new AttackState(this, stateMachine, "", dataAttackState);
         dashState = new DashState(this, stateMachine, "", dataDashState);
 
         stateMachine = new FiniteStateMachine();

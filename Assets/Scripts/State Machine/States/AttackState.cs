@@ -6,14 +6,14 @@ public class AttackState : State
 {
     protected D_AttackState attackData;
     protected Transform attackPosition;
-    private Weapon actualWeapon;
     
     //protected int[] attackInfo;
     protected bool animationFinished;
     //protected bool seeTarget;
-    public AttackState(Entity entity, FiniteStateMachine stateMachine, string animName, Weapon weapon) : base(entity, stateMachine, animName)
+    public AttackState(Entity entity, FiniteStateMachine stateMachine, string animName, D_AttackState attackData) : base(entity, stateMachine, animName)
     {
-
+        this.attackData = attackData;
+        //this.attackPosition = attackPosition;
     }
 
     public override void DoChecks()
@@ -24,25 +24,28 @@ public class AttackState : State
     public override void Enter()
     {
         base.Enter();
-        actualWeapon.Enter();
+
+        //Debug.Log("Enter atack");
+        //entity.atsm.attackState = this;
+        //attackInfo = new int[1] {attackData.damage};
+        //animationFinished = false;
     }
 
     public override void Exit()
     {
         base.Exit();
-        actualWeapon.Exit();
     }
 
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-        actualWeapon.LogicUpdate();
     }
 
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
-        actualWeapon.PhysicsUpdate();
+        Enter();
+        Exit();
     }
 
     public virtual void TriggerAttack()
