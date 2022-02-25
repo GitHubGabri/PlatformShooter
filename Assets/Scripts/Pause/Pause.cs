@@ -8,6 +8,8 @@ public class Pause : MonoBehaviour
 
     //Get the objects
 
+    
+
     public GameObject Menu;
     public GameObject PauseObj;
 

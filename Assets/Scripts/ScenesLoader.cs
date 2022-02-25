@@ -15,6 +15,10 @@ public class ScenesLoader : MonoBehaviour
     {
         StartCoroutine(LoadGame(SceneManager.GetActiveScene().buildIndex + 1));
     }
+    public void OpenLocker()
+    {
+        StartCoroutine(LoadLocker(SceneManager.GetActiveScene().buildIndex + 1));
+    }
     IEnumerator LoadLevel(int levelIndex)
     {
         Transition.SetTrigger("Start");
@@ -31,4 +35,13 @@ public class ScenesLoader : MonoBehaviour
 
         SceneManager.LoadScene("EscenaPrueba");
     }
+    IEnumerator LoadLocker(int levelIndex)
+    {
+        Transition.SetTrigger("Start");
+
+        yield return new WaitForSeconds(transitionTime);
+
+        SceneManager.LoadScene("Locker");
+    }
+
 }
